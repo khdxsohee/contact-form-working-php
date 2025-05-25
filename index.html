@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Form Working</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		body {
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(135deg, #ffcc70, #ff5e62);
+			background-attachment: fixed;
+		}
+
+		.main {
+			width: 90%;
+			max-width: 500px;
+			backdrop-filter: blur(16px) saturate(180%);
+			-webkit-backdrop-filter: blur(16px) saturate(180%);
+			background-color: rgba(255, 255, 255, 0.2);
+			border-radius: 16px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+			overflow: hidden;
+		}
+
+		.info {
+			background-color: rgba(255, 255, 255, 0.1);
+			padding: 20px;
+			text-align: center;
+			color: #ffffff;
+			font-size: 24px;
+			font-weight: bold;
+			text-shadow: 1px 1px 2px #000;
+		}
+
+		.form-box {
+			padding: 25px;
+		}
+
+		label {
+			color: #fff;
+			font-size: 16px;
+			margin-bottom: 5px;
+			display: block;
+			font-weight: bold;
+		}
+
+		input.inp,
+		textarea.msg-box {
+			width: 100%;
+			padding: 12px 15px;
+			margin-bottom: 15px;
+			border: none;
+			border-radius: 10px;
+			background: rgba(255, 255, 255, 0.2);
+			color: #fff;
+			font-size: 15px;
+			backdrop-filter: blur(4px);
+			outline: none;
+			transition: all 0.3s ease;
+		}
+
+		input.inp::placeholder,
+		textarea.msg-box::placeholder {
+			color: #eee;
+		}
+
+		input.inp:focus,
+		textarea.msg-box:focus {
+			background: rgba(255, 255, 255, 0.3);
+			border: 1px solid #fff;
+		}
+
+		textarea.msg-box {
+			height: 100px;
+			resize: none;
+		}
+
+		.sub-btn {
+			width: 100%;
+			padding: 12px;
+			border: none;
+			border-radius: 10px;
+			background: linear-gradient(135deg, #ff416c, #ff4b2b);
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: opacity 0.3s ease;
+		}
+
+		.sub-btn:hover {
+			opacity: 0.85;
+		}
+
+		@media (max-width: 600px) {
+			.form-box {
+				padding: 20px;
+			}
+
+			.info {
+				font-size: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="info">Leave A Message!</div>
+		<form action="mail_handler.php" method="post" name="form" class="form-box">
+			<label for="name">Full Name</label>
+			<input type="text" name="name" class="inp" placeholder="Enter Your Name" required>
+
+			<label for="email">Your Email</label>
+			<input type="email" name="email" class="inp" placeholder="Enter Your Email" required>
+
+			<label for="phone">Phone Number</label>
+			<input type="tel" name="phone" class="inp" placeholder="Enter Your Phone" required>
+
+
+			<label for="message">Message</label>
+			<textarea name="msg" class="msg-box" placeholder="Enter Your Message Here..." required></textarea>
+
+			<input type="submit" name="submit" value="Send" class="sub-btn">
+			<!-- Copyright inside the card -->
+			<p style="margin-top: 20px; text-align: center; color: #eee; font-size: 14px; text-shadow: 1px 1px 2px #000;">
+				&copy; 2025 by <strong>khdxsohee.</strong>
+			</p>
+
+		</form>
+	</div>
+
+
+
+
+
+</body>
+
+</html>
